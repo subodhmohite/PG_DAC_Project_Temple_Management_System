@@ -46,6 +46,7 @@ public class User extends BaseEntity {
 	@Column(name="date_of_birth",nullable=false)
 	private LocalDate dob;
 	
+	@Enumerated(EnumType.STRING)
 	@Column(name="gender",length=20,nullable=false)
 	private Gender gender;
 	
