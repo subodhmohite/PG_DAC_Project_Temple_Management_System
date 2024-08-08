@@ -27,7 +27,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 
-public class User extends BaseEntity {
+public class UserEntity extends BaseEntity {
 	
 	@Column(name="addhar_no",unique=true,length=12,nullable=false)
 	@Size(min=12,max=12)
