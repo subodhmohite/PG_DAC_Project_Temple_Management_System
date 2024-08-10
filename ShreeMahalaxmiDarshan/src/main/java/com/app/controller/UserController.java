@@ -17,13 +17,14 @@ public class UserController {
 	private UserService userService;
 	
 	
-	
-	  //Get User Profile By id
-	  
-	  @GetMapping("/my-profile/{userid}") 
-	  public ResponseEntity<?> showUserDetails(@PathVariable Long userid){
+	//Get User Profile By ID
+	//METHOD = GET
+	//http://localhost:8080/user/my-profile/{userid}
+	@GetMapping("/my-profile/{userid}") 
+	public ResponseEntity<?> showUserDetails(@PathVariable Long userid){
 	  System.out.println("in show User details"+userid); 
-	  return ResponseEntity.ok(userService.getUserProfile(userid)); }
+	  return ResponseEntity.ok(userService.getUserProfile(userid)); 
+	  }
 	 
 	 
 	 

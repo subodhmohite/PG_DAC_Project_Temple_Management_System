@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.app.service.DarshanService;
 import com.app.service.UserService;
 
 @RestController
@@ -15,6 +16,9 @@ public class AdminController {
 	
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private DarshanService darshanService;
 	
 	//Get All Users
 	//method= GET
@@ -32,6 +36,16 @@ public class AdminController {
 	public ResponseEntity<?> deleteUserById(Long userid){
 		System.out.println("in User Delete");
 		return ResponseEntity.ok(userService.deleteByUserId(userid));
+		
+	}
+	
+	//Get All Darshan Bookings
+	//METHOD=GET
+	//https://localhost:8080/admin/all-darshan
+	@GetMapping("/all-darshan")
+	public ResponseEntity<?> getAllDarshan(){
+		System.out.println("in get All Darshan Bookings");
+		return ResponseEntity.ok(darshanService.getAllDarshanBookings());
 	}
 
 }
