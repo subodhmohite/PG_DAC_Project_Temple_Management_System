@@ -51,5 +51,5 @@ public class Darshan extends BaseEntity  {
 	
 	@ManyToOne
 	@JoinColumn(name="user_id",nullable=false) //recommended to specify the name of Foreign Key 
-	private UserEntity userid;
+	private UserEntity user;
 }

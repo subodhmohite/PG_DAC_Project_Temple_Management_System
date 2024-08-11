@@ -6,7 +6,9 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
 
-import com.app.entities.TimeSlot;
+import com.app.entities.PoojaType;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,32 +21,23 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class DarshanResponseDTO {
+public class PoojaRequestDTO {
 	
+	@JsonProperty(access = Access.READ_ONLY)
 	private Long id;
 	
 	@NotNull
-	private String addharno;
+	private PoojaType poojaType;
 	
 	@NotNull
-	private String devoteename;
+	private LocalDate poojaDate;
 	
 	@NotNull
-	private LocalDate bookingDate;
-	
-	@NotNull
-	private TimeSlot timeSlot;
-	
-	@NotNull
-	@Range(max = 4)
-	private int noofperson;
+	@Range(max = 2)
+	private int noOfPerson;
 	
 	@NotNull
 	private double amount;
-	
 
-	
-
-	
 
 }

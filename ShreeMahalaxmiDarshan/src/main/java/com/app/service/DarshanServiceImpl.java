@@ -49,7 +49,8 @@ public class DarshanServiceImpl implements DarshanService {
 				.sum();
 		if(noofPersonsByDateAndTimeSlot + darshan.getNoofperson()>5)
 			return new ApiResponse("No Booking available for TimeSlot --" + darshanEntity.getTimeSlot());
-		darshanEntity.setUserid(curUser);
+		
+		darshanEntity.setUser(curUser);
 		darshanEntity.setDevoteename(curUser.getFirstname()+" "+curUser.getLastname());
 		darshanEntity.setAddharno(curUser.getAddharno());
 		darshanDao.save(darshanEntity);

@@ -64,16 +64,16 @@ public class UserEntity extends BaseEntity {
 	@Column(length=7,nullable=false)
 	private UserRole role;
 	
-	@OneToMany(mappedBy="userid",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy="user",cascade = CascadeType.ALL)
 	private List<Darshan> darshanList = new ArrayList<Darshan>();
 	
-	@OneToMany(mappedBy = "userid",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
 	private List<Aarti> aartiList = new ArrayList<Aarti>();
 	
-	@OneToMany(mappedBy = "userid",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
 	private List<Pooja> poojaList =  new ArrayList<Pooja>();
 	
-	@OneToMany(mappedBy = "userid",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
 	private List<Donation> donationList= new ArrayList<Donation>();
 	
 	

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.service.DarshanService;
+import com.app.service.PoojaService;
 import com.app.service.UserService;
 
 @RestController
@@ -19,6 +20,9 @@ public class AdminController {
 	
 	@Autowired
 	private DarshanService darshanService;
+	
+	@Autowired
+	private PoojaService poojaService;
 	
 	//Get All Users
 	//method= GET
@@ -48,4 +52,12 @@ public class AdminController {
 		return ResponseEntity.ok(darshanService.getAllDarshanBookings());
 	}
 
+	//Get All Pooja Bookings
+	//METHOD=GET
+	//https://localhost:8080/admin/all-pooja
+	@GetMapping("/all-pooja")
+	public ResponseEntity<?> getAllPooja(){
+		System.out.println("in get all Pooja Bookings");
+		return ResponseEntity.ok(poojaService.getAllPoojaBookings());
+	}
 }

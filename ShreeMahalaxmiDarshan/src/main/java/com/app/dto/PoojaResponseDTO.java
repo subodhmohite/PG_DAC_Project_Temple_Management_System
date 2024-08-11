@@ -2,11 +2,12 @@ package com.app.dto;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
 
-import com.app.entities.TimeSlot;
+import com.app.entities.PoojaType;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,35 +17,32 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
-public class DarshanResponseDTO {
+public class PoojaResponseDTO {
 	
 	private Long id;
 	
 	@NotNull
+	@NotBlank
 	private String addharno;
 	
-	@NotNull
+	@NotBlank
+	@NotBlank
 	private String devoteename;
 	
 	@NotNull
-	private LocalDate bookingDate;
+	private PoojaType poojaType;
 	
 	@NotNull
-	private TimeSlot timeSlot;
+	private LocalDate poojaDate;
 	
 	@NotNull
-	@Range(max = 4)
-	private int noofperson;
+	@Range(max = 2)
+	private int noOfPerson;
 	
 	@NotNull
 	private double amount;
-	
-
-	
-
-	
 
 }
