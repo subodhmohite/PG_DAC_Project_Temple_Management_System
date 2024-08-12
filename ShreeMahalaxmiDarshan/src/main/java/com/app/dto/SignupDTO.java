@@ -29,7 +29,7 @@ public class SignupDTO {
 	
 	@NotNull(message = "This field cannot contain null values")
 	@NotBlank(message = "This field cannot be empty")
-	private String addharno;
+	private String aadhaarno;
 	
 	@NotBlank(message = "First name required")
 	private String firstname;

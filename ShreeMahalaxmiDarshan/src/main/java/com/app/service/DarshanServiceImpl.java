@@ -52,7 +52,7 @@ public class DarshanServiceImpl implements DarshanService {
 		
 		darshanEntity.setUser(curUser);
 		darshanEntity.setDevoteename(curUser.getFirstname()+" "+curUser.getLastname());
-		darshanEntity.setAddharno(curUser.getAddharno());
+		darshanEntity.setAadhaarno(curUser.getAadhaarno());
 		darshanDao.save(darshanEntity);
 		
 		return new ApiResponse("Darshan Booking successfully Done For given Slot");

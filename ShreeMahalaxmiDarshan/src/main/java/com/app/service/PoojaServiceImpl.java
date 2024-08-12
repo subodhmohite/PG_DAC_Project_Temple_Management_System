@@ -46,7 +46,7 @@ import com.app.repository.UserDao;
 			 return new ApiResponse("Booking not Available for the specified pooja type on this Date,Try Another Dates!!");
 		 
 		 poojaEntity.setUser(curUser); 
-		 poojaEntity.setAddharno(curUser.getAddharno());
+		 poojaEntity.setAadhaarno(curUser.getAadhaarno());
 		 poojaEntity.setDevoteename(curUser.getFirstname()+" "+curUser.getLastname());
 		 Pooja persitentpooja = poojaDao.save(poojaEntity);
 		 System.out.println(persitentpooja);

@@ -29,22 +29,22 @@ public class Aarti extends BaseEntity {
 	
 	
 	
-	@Column(name="addhar_no",length=12,nullable=false)
+	@Column(name="aadhaar_no",length=12,nullable=false)
 	@Size(min=12,max=12)
-	private String addharno;
+	private String aadhaarno;
 	
 	@Column(name="devotee_name",length=30,nullable=false)
 	private String devoteename;
 	
 	@Column(name="no_of_person")
-	private int noofperson;
+	private int noOfPerson;
 	
 	@Column(name="aarti_date",nullable=false)
-	private LocalDate aartidate;
+	private LocalDate aartiDate;
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name="aarti_type",nullable=false)
-	private AartiType aartitype;
+	private AartiType aartiType;
 	
 	private double amount;
 	

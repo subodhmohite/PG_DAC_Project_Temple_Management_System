@@ -26,7 +26,7 @@ public class PoojaResponseDTO {
 	
 	@NotNull
 	@NotBlank
-	private String addharno;
+	private String aadhaarno;
 	
 	@NotBlank
 	@NotBlank

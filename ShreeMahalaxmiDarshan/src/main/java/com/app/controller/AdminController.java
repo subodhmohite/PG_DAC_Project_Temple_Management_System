@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.app.service.AartiService;
 import com.app.service.DarshanService;
+import com.app.service.DonationService;
 import com.app.service.PoojaService;
 import com.app.service.UserService;
 
@@ -23,6 +25,12 @@ public class AdminController {
 	
 	@Autowired
 	private PoojaService poojaService;
+	
+	@Autowired
+	private AartiService aartiService;
+	
+	@Autowired
+	private DonationService donationService;
 	
 	//Get All Users
 	//method= GET
@@ -59,5 +67,23 @@ public class AdminController {
 	public ResponseEntity<?> getAllPooja(){
 		System.out.println("in get all Pooja Bookings");
 		return ResponseEntity.ok(poojaService.getAllPoojaBookings());
+	}
+	
+	//Get All Aarti Bookings
+	//METHOD=GET
+	//https://localhost:8080/admin/all-aarti
+	@GetMapping("/all-aarti")
+	public ResponseEntity<?> getAllAarti(){
+		System.out.println("in get all Aarti Bookings");
+		return ResponseEntity.ok(aartiService.getAllAartiBookings());
+	}
+	
+	//Get All Donations
+	//METHOD=GET
+	//https://localhost:8080/admin/all-donation
+	@GetMapping("/all-donation")
+	public ResponseEntity<?> getAllDonation(){
+		System.out.println("in get all Donations");
+		return ResponseEntity.ok(donationService.getAllDonations());
 	}
 }
