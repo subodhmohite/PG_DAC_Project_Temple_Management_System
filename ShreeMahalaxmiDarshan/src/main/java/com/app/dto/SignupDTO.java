@@ -9,7 +9,6 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import com.app.entities.Gender;
-import com.app.entities.UserRole;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
@@ -51,8 +50,6 @@ public class SignupDTO {
 	@NotBlank(message = "Please enter valid mobile number in order to proceed!")
 	@Pattern(regexp = "^\\d{10}$",message = "Invalid number")
 	private String mobileno;
-	
-	private UserRole role;
 	
 	private LocalDate dob;
 	

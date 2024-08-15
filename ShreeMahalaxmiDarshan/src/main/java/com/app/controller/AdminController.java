@@ -2,6 +2,7 @@ package com.app.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import com.app.service.UserService;
 
 @RestController
 @RequestMapping("/admin")
+@CrossOrigin("*")
 public class AdminController {
 	
 	@Autowired
@@ -34,7 +36,7 @@ public class AdminController {
 	
 	//Get All Users
 	//method= GET
-	// https://localhost:8080/admin/all-users
+	// http://localhost:8080/admin/all-users
 	@GetMapping("/all-users")
 	public ResponseEntity<?> getAllUsers(){
 		System.out.println("in get All Users");
@@ -43,7 +45,7 @@ public class AdminController {
 	
 	//Delete User By Id
 	//method= DELETE
-	//https://localhost:8080/admin/all-users/{userid}
+	//http://localhost:8080/admin/all-users/{userid}
 	@DeleteMapping("/all-users/{userid}")
 	public ResponseEntity<?> deleteUserById(Long userid){
 		System.out.println("in User Delete");
@@ -53,7 +55,7 @@ public class AdminController {
 	
 	//Get All Darshan Bookings
 	//METHOD=GET
-	//https://localhost:8080/admin/all-darshan
+	//http://localhost:8080/admin/all-darshan
 	@GetMapping("/all-darshan")
 	public ResponseEntity<?> getAllDarshan(){
 		System.out.println("in get All Darshan Bookings");
@@ -62,7 +64,7 @@ public class AdminController {
 
 	//Get All Pooja Bookings
 	//METHOD=GET
-	//https://localhost:8080/admin/all-pooja
+	//http://localhost:8080/admin/all-pooja
 	@GetMapping("/all-pooja")
 	public ResponseEntity<?> getAllPooja(){
 		System.out.println("in get all Pooja Bookings");
@@ -71,7 +73,7 @@ public class AdminController {
 	
 	//Get All Aarti Bookings
 	//METHOD=GET
-	//https://localhost:8080/admin/all-aarti
+	//http://localhost:8080/admin/all-aarti
 	@GetMapping("/all-aarti")
 	public ResponseEntity<?> getAllAarti(){
 		System.out.println("in get all Aarti Bookings");
@@ -80,7 +82,7 @@ public class AdminController {
 	
 	//Get All Donations
 	//METHOD=GET
-	//https://localhost:8080/admin/all-donation
+	//http://localhost:8080/admin/all-donation
 	@GetMapping("/all-donation")
 	public ResponseEntity<?> getAllDonation(){
 		System.out.println("in get all Donations");

@@ -1,5 +1,6 @@
 package com.app.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import com.app.dto.AartiRequestDTO;
@@ -13,5 +14,7 @@ public interface AartiService {
 	ApiResponse deleteAartiBookingById(Long id);
 	
 	List<AartiResponseDTO> getAllAartiBookings();
+	
+	List<LocalDate> getAllBookedDates();
 
 }

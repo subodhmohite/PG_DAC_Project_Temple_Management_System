@@ -49,6 +49,8 @@ public class UserDTO {
 	
 	private Gender gender;
 	
+	private String address;
+	
 	
 	
 	

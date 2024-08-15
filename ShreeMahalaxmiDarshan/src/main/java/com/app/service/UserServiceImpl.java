@@ -3,11 +3,10 @@ package com.app.service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.transaction.Transactional;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.app.customexception.ResourceNotFoundException;
 import com.app.dto.ApiResponse;
@@ -33,7 +32,7 @@ public class UserServiceImpl implements UserService {
 	public SignupDTO userRegistration(SignupDTO regdto) {
 		UserEntity user=mapper.map(regdto, UserEntity.class);
 		user.setPassword(user.getPassword());
-		user.setRole(UserRole.devotee);
+		user.setRole(UserRole.DEVOTEE);
 		
 
 		return mapper.map(userDao.save(user),SignupDTO.class );

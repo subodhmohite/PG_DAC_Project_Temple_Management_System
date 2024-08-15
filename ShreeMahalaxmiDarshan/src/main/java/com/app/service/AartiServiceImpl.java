@@ -4,12 +4,11 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.transaction.Transactional;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.app.customexception.ResourceNotFoundException;
 import com.app.dto.AartiRequestDTO;
@@ -89,6 +88,12 @@ public class AartiServiceImpl implements AartiService {
 		else {
 			return new ApiResponse("Aarti can't be cancelled as the buffer limit of 7 days has crossed....");
 		}
+	}
+
+	@Override
+	public List<LocalDate> getAllBookedDates() {
+
+		return aartiDao.findAllBookedDatesByNoOfPerson();
 	}
 
 }

@@ -63,16 +63,16 @@ public class UserEntity extends BaseEntity {
 	@Column(length=7,nullable=false)
 	private UserRole role;
 	
-	@OneToMany(mappedBy="user",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy="user",cascade = CascadeType.ALL ,orphanRemoval = true)
 	private List<Darshan> darshanList = new ArrayList<Darshan>();
 	
-	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL ,orphanRemoval = true)
 	private List<Aarti> aartiList = new ArrayList<Aarti>();
 	
-	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL ,orphanRemoval = true)
 	private List<Pooja> poojaList =  new ArrayList<Pooja>();
 	
-	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true)
 	private List<Donation> donationList= new ArrayList<Donation>();
 	
 	
