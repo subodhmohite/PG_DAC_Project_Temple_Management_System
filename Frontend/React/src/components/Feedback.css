@@ -1,0 +1,9 @@
+.normal-button {
+    background-color: #ffffff; /* Normal button color */
+    color: #000000; /* Normal text color */
+  }
+  
+  .dark-button {
+    background-color: #000000; /* Dark button color */
+    color: #ffffff; /* Dark text color */
+  }

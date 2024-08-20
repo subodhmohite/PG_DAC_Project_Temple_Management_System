@@ -1,0 +1,21 @@
+.running-line-container {
+    width: 100%;
+    overflow: hidden; /* Hide overflowing content */
+    color: red;
+  }
+  
+  .running-line-text {
+    white-space: nowrap; /* Prevent line break */
+    display: inline-block; /* Display inline */
+    animation: running-line-animation 50s linear infinite; /* Apply animation */
+  }
+  
+  @keyframes running-line-animation {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* End off-screen to the left */
+    }
+  }
+  
