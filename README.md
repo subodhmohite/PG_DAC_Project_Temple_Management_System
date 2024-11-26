@@ -64,25 +64,28 @@ administrators with tools to manage darshan bookings, track donations, and maint
    cd PG_DAC_Project_Temple_Management_System
 
 **2.Backend Setup**
-Navigate to the backend directory:
-cd ShreeMahalaxmiDarshan
-Configure the application.properties file with your database credentials.
-Run the Spring Boot application from STS.
+- Navigate to the backend directory:
+  ```bash
+  cd ShreeMahalaxmiDarshan
+- Configure the application.properties file with your database credentials.
+- Run the Spring Boot application from STS.
 
 **3.Frontend Setup**
-Navigate to the frontend directory:
-cd FrontEnd
-cd React
+- Navigate to the frontend directory:
+  ```bash
+  cd FrontEnd
+  cd React
 
-Install dependencies:
-npm install
+- Install dependencies:
+  ```bash
+  npm install
 
-Start the React development server:
-npm start
+- Start the React development server:
+   ```bash
+   npm start
 
 **4.Access the Application**
-Open a web browser and navigate to:
-http://localhost:3000
+- Open a web browser and navigate to:http://localhost:3000
 
 ## 🔐 Security
 **Password Hashing:** User passwords are stored securely using BCrypt.
@@ -91,17 +94,17 @@ http://localhost:3000
 
 ## 📖 Project Structure
 # Backend
-src/main/java/com.app/ - Contains controllers, services, and repository classes.
-src/main/resources/ - Configuration files and SQL scripts.
+- src/main/java/com.app/ - Contains controllers, services, and repository classes.
+- src/main/resources/ - Configuration files and SQL scripts.
 
 # Frontend
-FrontEnd/React/src/components/ - React components for the UI.
+- FrontEnd/React/src/components/ - React components for the UI.
 
 # 📧 Contact
-For any queries, feel free to reach out at subodhmohite3424@gmail.com.
+- For any queries, feel free to reach out at subodhmohite3424@gmail.com.
 
 # 🏅 Acknowledgments
-This project is part of the PG-DAC Program and aims to provide a practical solution to real-world challenges faced by temples in managing their operations efficiently.
+- This project is part of the PG-DAC Program and aims to provide a practical solution to real-world challenges faced by temples in managing their operations efficiently.
 
 
 
